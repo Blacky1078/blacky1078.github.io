@@ -49,6 +49,12 @@ const button2 = () => {
     }
   });
 };
+
+const theme = (event) => {
+  const value = event.target.value;
+  document.querySelector("html").setAttribute("data-bs-theme", value);
+};
+
 const todo = [];
 todo.push(
   "Shave the Brush",
