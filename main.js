@@ -65,7 +65,7 @@ const button_4 = () => {
   todo.push(document.getElementById("TODO").value);
   localStorage.setItem("TODO", JSON.stringify(todo));
 };
-// localStorage.setItem("TODO", JSON.stringify(todo));
+localStorage.setItem("TODO", JSON.stringify(todo));
 const local1 = JSON.parse(localStorage.getItem("TODO"));
 const todoing = [];
 todoing.push(
@@ -77,7 +77,7 @@ const button_5 = () => {
   todoing.push(document.getElementById("TODOing").value);
   localStorage.setItem("TODOing", JSON.stringify(todoing));
 };
-// localStorage.setItem("TODOing", JSON.stringify(todoing));
+localStorage.setItem("TODOing", JSON.stringify(todoing));
 const local2 = JSON.parse(localStorage.getItem("TODOing"));
 local1.forEach((element) => {
   const tododiv = document.getElementById("todo_div");
