@@ -74,7 +74,7 @@ todoing.push(
   "Playing Games"
 );
 const button_5 = () => {
-  todo.push(document.getElementById("TODOing").value);
+  todoing.push(document.getElementById("TODOing").value);
   localStorage.setItem("TODOing", JSON.stringify(todoing));
 };
 // localStorage.setItem("TODOing", JSON.stringify(todoing));
