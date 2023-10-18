@@ -1,0 +1,166 @@
+<html data-bs-theme="dark">
+  <head>
+    <title>User</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet" />
+    <style>
+      header {
+        margin: 0px;
+        background-color: black;
+        border-bottom: 4px;
+        padding: 4px;
+        font-size: large;
+      }
+      nav {
+        margin-left: 5px;
+        display: inline-block;
+        font-size: 25px;
+      }
+      h5 {
+        display: inline-block;
+      }
+      @keyframes Animate1 {
+        from {
+          margin-left: 0%;
+          background-color: red;
+        }
+        to {
+          margin-left: 80%;
+          background-color: orange;
+        }
+      }
+
+      body {
+        display: block;
+        background: url("/todo_list_app/Photos/photo-1464822759023-fed622ff2c3b.jpg");
+        animation-name: MainPageBack;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+      @keyframes MainPageBack {
+        form {
+          background: url("/todo_list_app/Photos/photo-1464822759023-fed622ff2c3b.jpg");
+        }
+        to {
+          background: url("/todo_list_app/Photos/download.jpg");
+        }
+      }
+      h2 {
+        font-family: "Tilt Neon", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        text-transform: none;
+        color: aliceblue;
+      }
+      a:hover {
+        cursor: pointer;
+        font-style: italic;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="col-9 text-light p-2 mt-1" id="head_user">
+          <h4 style="font-family: 'pacifico', sans-serif; margin-left: 10px">
+            Hello
+          </h4>
+        </div>
+        <div class="col-3 text-light mt-2 mb-1">
+          <nav>
+            <select
+              onchange="theme(event)"
+              class="form-select"
+              id="theme-select">
+              <option selected>Select the Theme</option>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+            </select>
+          </nav>
+          <nav>
+            <a role="button" href="#menu_button" data-bs-toggle="offcanvas"
+              ><img
+                src="../Photos/icons8-menu-32.png"
+                width="30px"
+                height="auto"
+                style="margin-left: 120px; background: transparent"
+            /></a>
+          </nav>
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-backdrop="true"
+            id="menu_button">
+            <div class="offcanvas-header">
+              <h3 class="m-2 offcanvas-title"><i>ToDo App</i></h3>
+              <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul>
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="../contact_us.html">Contact us</a></li>
+                <li><a href="">Help & Support</a></li>
+              </ul>
+              <hr />
+              <ul>
+                <li><a href="../data_center.html">Data Center</a></li>
+              </ul>
+            </div>
+            <div class="offcanvas-end text-center">--Copyrights 2022-23--</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="row container">
+        <div
+          style="opacity: 50%"
+          id="To Do List"
+          class="col-5 m-5 bg-dark p-4 border border-1 border-black rounded"
+          style="height: 400px; width: auto">
+          <h2>To Do List</h2>
+          <hr />
+          <ul id="todo_div"></ul>
+        </div>
+        <div
+          style="opacity: 50%"
+          id="Doing List"
+          class="col-5 bg-dark m-5 p-4 border border-1 border-black rounded"
+          style="height: 300px; width: auto">
+          <h2>Doing List</h2>
+          <hr />
+          <ul id="todoing_div"></ul>
+        </div>
+      </div>
+      <button
+        style="
+          background-color: transparent;
+          color: black;
+          font-weight: bold;
+          font-size: 30px;
+        ">
+        <a href="../main.html" style="text-decoration: none">Back</a>
+      </button>
+    </main>
+    <script src="../main.js"></script>
+  </body>
+</html>
