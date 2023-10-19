@@ -41,7 +41,7 @@ const button2 = () => {
       button.style.marginLeft = "100px";
       button.style.marginTop = "100px";
       const a = document.createElement("a");
-      a.href = "https://blacky1078.github.io/blacky1078-1-.github.io/Users/user.html";
+      a.href = "https://blacky1078.github.io/Users/user.html";
       a.append("Click Here");
 
       button.append(a);
