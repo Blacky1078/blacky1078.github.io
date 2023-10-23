@@ -15,14 +15,20 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
       rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet" />
     <style>
       header {
         margin: 0px;
         background-color: black;
-        border-bottom: 4px;
+        border-bottom: 0px;
         padding: 4px;
         font-size: large;
       }
+
       nav {
         display: inline-block;
         font-size: 25px;
@@ -31,50 +37,66 @@
       #Welcome_screen1 {
         display: inline-flex;
         margin-left: 0%;
-        margin-top: 10px;
+        padding-left: 18px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 25px 50px;
+        margin-top: 25px;
         animation-name: Animate1;
         background-color: red;
-        animation-duration: 4s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
       }
+
       @keyframes Animate1 {
         from {
           margin-left: 0%;
           background-color: red;
-          font-style: normal;
-          font-weight: 100;
         }
+
         to {
-          margin-left: 77%;
-          font-weight: 900;
+          margin-left: 70%;
           background-color: orange;
-          font-style: italic;
         }
       }
+
       .tt {
-        margin-left: 70px;
         padding: 10px;
+        padding-top: 45px;
+        height: 450px;
+        width: 400px;
+        margin-top: 45px;
+        margin-left: 125px;
       }
-      #loading {
-        display: none;
+
+      #progress {
+        animation-name: Loading;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
       }
+
       @keyframes Loading {
         from {
           width: 0%;
         }
+
         to {
           width: 100%;
         }
       }
+
       @keyframes LoadingPage {
         from {
           display: block;
         }
+
         to {
           display: none;
         }
       }
+
       #MainPageTODO {
         display: none;
       }
@@ -83,16 +105,24 @@
         text-decoration: none;
         text-transform: none;
       }
+
       a:hover {
         cursor: pointer;
         font-style: italic;
       }
     </style>
   </head>
+
   <body>
     <header>
       <div class="row">
-        <div class="col-9 text-light"><h3 class="mt-2 ms-2">ToDo</h3></div>
+        <div class="col-9 text-light">
+          <h3
+            class="mt-2"
+            style="padding: 5px; font-family: 'Dancing Script', cursive">
+            TODO
+          </h3>
+        </div>
         <div class="col-3 text-light mt-2 mb-1">
           <nav>
             <select
@@ -104,9 +134,14 @@
               <option value="light">Light</option>
             </select>
           </nav>
-          <a role="button" href="#menu_button" data-bs-toggle="offcanvas"
+          <a
+            style="margin-left: 100px"
+            role="button"
+            href="#menu_button"
+            data-bs-toggle="offcanvas"
             ><img
-              src="./Photos/icons8-menu-32.png"
+              src="https://blacky1078.github.io/Photos/icons8-menu-32.png"
+              style="display: inline-block"
               width="30px"
               height="auto"
               style="margin-left: 120px; background: transparent"
@@ -121,11 +156,14 @@
             </div>
             <div class="offcanvas-body">
               <ul>
-                <li><a href="./main.html">Home</a></li>
-                <li><a href="./contact_us.html">Contact us</a></li>
+                <li><a href="https://blacky1078.github.io/main.html">Home</a></li>
+                <li><a href="https://blacky1078.github.io/contact_us.html">Contact us</a></li>
                 <li><a href="">Help & Support</a></li>
               </ul>
               <hr />
+              <ul>
+                <li><a href="https://blacky1078.github.io/CR.html">Sign Up</a></li>
+              </ul>
             </div>
             <div class="offcanvas-end text-center">--Copyrights 2022-23--</div>
           </div>
@@ -136,87 +174,113 @@
       <section>
         <h5 id="Welcome_screen1" class="display-4">!!Welcome!!</h5>
       </section>
-      <section class="row">
-        <div class="text-center col-5 tt border border-1 rounded mt-4">
-          <h5 style="font-family: 'Tilt Neon', sans-serif">
-            Login An Existed Account:
-          </h5>
-          <br />
-          <form class="m-1 p-1 text-center">
-            <div class="form-group m-2">
-              <input
-                id="Username"
-                type="text"
-                placeholder="Username..."
-                class="form-control" />
-            </div>
-            <div class="form-group m-2">
-              <input
-                id="Password"
-                type="text"
-                placeholder="Password..."
-                class="form-control" />
-            </div>
-            <div class="form-group m-2">
-              <button
-                onclick="button2()"
-                class="btn btn-danger"
-                id="Button1"
-                type="button">
-                !!Submit!!
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="text-center col-5 tt border border-1 rounded mt-4">
-          <h5 style="font-family: 'Tilt Neon', sans-serif">
-            Create An Account:
-          </h5>
-          <form class="m-1 p-1 text-center">
-            <div class="form-group m-2">
-              <input
-                id="CRfullname"
-                type="text"
-                placeholder="Your Full Name"
-                class="form-control" />
-            </div>
-            <div class="form-group m-2">
-              <input
-                type="text"
-                id="CRusername"
-                placeholder="Enter the Username"
-                class="form-control" />
-            </div>
-            <div class="form-group m-2">
-              <input
-                id="CRpassword"
-                type="text"
-                placeholder="Enter the Password"
-                class="form-control" />
-            </div>
-            <div class="form-group m-2">
-              <button onclick="button()" class="btn btn-danger" type="button">
-                !!Create An Account!!
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
       <section>
+        <div class="row" style="padding: 0px; margin: 0px; width: 100%">
+          <div id="imgtag" class="col-5" style="margin-left: 80px">
+            <img
+              alt=""
+              src="https://blacky1078.github.io/Photos/20602934_6300830-removebg.png"
+              height="500px"
+              width="auto" />
+          </div>
+          <div class="text-center col-5 tt border border-1 rounded">
+            <h5 style="font-family: 'Tilt Neon', sans-serif">
+              Login An Existed Account:
+            </h5>
+            <br />
+            <form class="m-2 p-1 text-center">
+              <div class="m-1 form-group m-3">
+                <input
+                  id="Username"
+                  type="text"
+                  placeholder="Username..."
+                  class="form-control" />
+              </div>
+              <div class="m-1 form-group m-3">
+                <input
+                  id="Password"
+                  type="text"
+                  placeholder="Password..."
+                  class="form-control" />
+              </div>
+              <div class="m-1 form-group m-3">
+                <button
+                  onclick="button2()"
+                  class="btn btn-danger"
+                  id="Button1"
+                  type="button">
+                  !!Login!!
+                </button>
+              </div>
+            </form>
+            <div id="Login_modal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-light bg-black">
+                    <h2 class="m-1 text-light bg-black">Welcome User,</h2>
+                    <button
+                      onclick="close1()"
+                      class="btn-close"
+                      data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body text-light bg-black">
+                    <h1>Loading...</h1>
+                    <br />
+                    <div class="progress m-4">
+                      <div
+                        role="progressbar"
+                        class="progress-bar"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        id="progress"></div>
+                    </div>
+                  </div>
+                  <div class="modal-footer text-light bg-black">
+                    <button onclick="" class="btn btn-danger">
+                      <a
+                        href="https://blacky1078.github.io/Users/user.html"
+                        style="
+                          text-transform: none;
+                          text-decoration: none;
+                          color: white;
+                        "
+                        >Go</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-left: 40px">
+              <div class="col-4">
+                <hr />
+              </div>
+              <div class="col-2" style="font-family: 'Tilt Neon', sans-serif">
+                Or
+              </div>
+              <div class="col-4">
+                <hr />
+              </div>
+            </div>
+            <div class="text-center">
+              <h5 style="font-family: 'Tilt Neon', sans-serif">
+                Don't Have an Account
+              </h5>
+              <small
+                ><a
+                  href="https://blacky1078.github.io/CR.html"
+                  style="
+                    font-family: 'Tilt Neon', sans-serif;
+                    font-size: larger;
+                  "
+                  >Sign Up</a
+                ></small
+              >
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <main class="m-5 text-center" id="loading">
-      <h1>Loading...</h1>
-      <br />
-      <div class="progress m-4">
-        <div
-          role="progressbar"
-          class="progress-bar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          id="progress"></div>
-      </div>
-    </main>
-    <script src="./main.js"></script>
+    <script src="https://blacky1078.github.io/main.js"></script>
   </body>
 </html>
